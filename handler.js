@@ -78,7 +78,7 @@ module.exports = {
         global.time = require('moment-timezone').tz('Asia/Jakarta').format('HH:mm:ss')
 
         if (!m) return
-        console.log(JSON.stringify(m, null, 4))
+        //console.log(JSON.stringify(m, null, 4))
         try {
             m = simple.smsg(this, m) || m
             if (!m) return
