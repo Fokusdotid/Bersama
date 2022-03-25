@@ -74,7 +74,7 @@ const connectionOptions = {
   version: [2, 2204, 13],
   printQRInTerminal: true,
   auth: state,
-  logger: P({ level: 'silent' })
+  //logger: P({ level: 'silent' })
 }
 
 global.conn = simple.makeWASocket(connectionOptions)
