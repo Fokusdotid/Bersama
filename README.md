@@ -1,5 +1,6 @@
 # Bersama
 
+<a href="https://visitor-badge.glitch.me/badge?page_id=fokusdotid/bersama"><img title="Visitor" src="https://visitor-badge.glitch.me/badge?page_id=fokusdotid/bersama"></a>
 <a href="https://github.com/Fokusdotid/bersama/network/members"><img title="Forks" src="https://img.shields.io/github/forks/Fokusdotid/bersama?label=Forks&color=blue&style=flat-square"></a>
 <a href="https://github.com/Fokusdotid/bersama/watchers"><img title="Watchers" src="https://img.shields.io/github/watchers/Fokusdotid/bersama?label=Watchers&color=green&style=flat-square"></a>
 <a href="https://github.com/Fokusdotid/bersama/stargazers"><img title="Stars" src="https://img.shields.io/github/stars/Fokusdotid/bersama?label=Stars&color=yellow&style=flat-square"></a>
@@ -33,7 +34,7 @@ node .
 
 ## UNTUK PENGGUNA TERMUX
 
-* Download Termux ['Klik Disini'](https://github.com/termux/termux-app/releases/download/v0.118.0/termux-app_v0.118.0+github-debug_universal.apk)
+* Download Termux [`Klik Disini`](https://github.com/termux/termux-app/releases/download/v0.118.0/termux-app_v0.118.0+github-debug_universal.apk)
 
 ```
 $ pkg update && upgrade -y
