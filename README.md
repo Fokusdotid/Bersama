@@ -32,8 +32,10 @@ node .
 ---------
 
 ## UNTUK PENGGUNA TERMUX
+
+* Download Termux ['Klik Disini'](https://github.com/termux/termux-app/releases/download/v0.118.0/termux-app_v0.118.0+github-debug_universal.apk)
+
 ```
-* Download Apk Termux [`Klik Disini`](https://github.com/termux/termux-app/releases/download/v0.118.0/termux-app_v0.118.0+github-debug_universal.apk)
 $ pkg update && upgrade -y
 $ apt update && upgrade -y
 $ pkg install ffmpeg
