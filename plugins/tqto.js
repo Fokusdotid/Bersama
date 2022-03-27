@@ -15,6 +15,8 @@ Ariffb:
 https://github.com/Ariffb25
 Aguz:
 https://github.com/FokusDotId
+Aniq12
+https://github.com/aniq12
 Ilman: 
 https://github.com/ilmanhdyt
 Amirul: 
@@ -26,7 +28,7 @@ https://github.com/raselcomel
 
 \`\`\`${conn.user.name}\`\`\`
 `
- conn.sendTBL(m.chat, tqto, wm, 'https://avatars.githubusercontent.com/u/18616827?v=4', `Source Code Bot ✨`, `https://github.com/raselcomel/lucubot-md`, null, null, 'Menu', `${usedPrefix}menu`, null, null, null, null, m) 
+ conn.sendTBL(m.chat, tqto, wm, 'https://avatars.githubusercontent.com/u/18616827?v=4', `Source Code Bot ✨`, `https://github.com/fokusdotid/bersama`, null, null, 'Menu', `${usedPrefix}menu`, null, null, null, null, m) 
 }
 handler.help = ['tqto']
 handler.tags = ['info']
