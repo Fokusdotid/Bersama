@@ -129,12 +129,21 @@ conn.logger.level = 'trace'
 ```js
 conn.logger.level = 'debug'
 ```
+#### Thanks To 
+**Allah SWT**,
 
-#### Special
-[Nurutomo](https://github.com/Nurutomo.png?size=100)(https://github.com/Nurutomo) | [BochilGaming](https://github.com/BochilGaming.png?size=100)(https://github.com/BochilGaming)
- Penulis / Pencipta | Yang Punya SC
+**Orang Tua**,
 
-##### Contributor
+**All Team Bot Discussion**,
+
+**Semua yang selalu mendukung**
+
+
+##### Special Thanks to
+[![Nurutomo](https://github.com/Nurutomo.png?size=100)](https://github.com/Nurutomo)
+[![BochilGaming](https://github.com/BochilGaming.png?size=100)](https://github.com/BochilGaming)
+
+###### Contributor
 [![Fokus ID](https://github.com/fokusdotid.png?size=100)](https://github.com/fokusdotid)
 [![Aniq](https://github.com/aniq12.png?size=100)](https://github.com/aniq12)
 [![Rasel Comel](https://github.com/raselcomel.png?size=100)](https://github.com/raselcomel)
