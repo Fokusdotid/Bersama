@@ -2,6 +2,7 @@ let os = require('os')
 let util = require('util')
 let { performance } = require('perf_hooks')
 let { sizeFormatter } = require('human-readable')
+const delay = ms => isNumber(ms) && new Promise(resolve => setTimeout(resolve, ms))
 let format = sizeFormatter({
   std: 'JEDEC', // 'SI' (default) | 'IEC' | 'JEDEC'
   decimalPlaces: 2,
@@ -38,9 +39,10 @@ let handler = async (m, { conn, usedPrefix }) => {
   })
   let old = performance.now()
   m.reply('_Testing speed..._')
+  await delay(1000)
   let neww = performance.now()
   let speed = neww - old
-  conn.sendButton(m.chat, `
+  await conn.sendButton(m.chat, `
 Merespon dalam *${speed} milidetik*
 
 💬 Status : 
