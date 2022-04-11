@@ -2,6 +2,7 @@ let os = require('os')
 let util = require('util')
 let { performance } = require('perf_hooks')
 let { sizeFormatter } = require('human-readable')
+const isNumber = x => typeof x === 'number' && !isNaN(x)
 const delay = ms => isNumber(ms) && new Promise(resolve => setTimeout(resolve, ms))
 let format = sizeFormatter({
   std: 'JEDEC', // 'SI' (default) | 'IEC' | 'JEDEC'
