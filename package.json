@@ -39,7 +39,7 @@
     "dependencies": {
         "@adiwajshing/baileys": "^4.0.1",
         "@adiwajshing/keyed-db": "^0.2.4",
-        "@bochilteam/scraper": "^0.0.81",
+        "@bochilteam/scraper": "^2.0.0",
         "awesome-phonenumber": "^2.64.0",
         "axios": "^0.21.1",
         "cfonts": "^2.10.0",
