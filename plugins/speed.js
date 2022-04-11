@@ -18,7 +18,6 @@ function clockString(ms) {
     return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')
   }
 let handler = async (m, { conn, command }) => {
-        m.reply(`_Testing speed..._`)
 	let fgif = {key: {participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: "status@broadcast" } : {})},message: {"videoMessage": { "title": `Anu`, "h": `Hmm`,'seconds': '359996400', 'gifPlayback': 'true', 'caption': `${await conn.getName("6285346545126-1629709306@g.us")}\nPowered by ${await conn.getName("0@s.whatsapp.net")}\nCreated by ${wm}`, 'jpegThumbnail': await(await fetch(img)).buffer()}}}
 	let NotDetect = 'Not Detect'
         let cpux = osu.cpu
