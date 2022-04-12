@@ -1,14 +1,14 @@
-let handler = async(m, { conn, usedPrefix, command }) => {
-let hekerr = pickRandom(global.heker)
-     conn.sendBL(m.chat, hekerr, wm, fla + `${command}`, [[`Hacker`, `.${command}`]], m)
-    }
+let handler = async (m, { conn, usedPrefix, command }) => {
+  let hekerr = pickRandom(global.heker)
+  conn.sendBL(m.chat, hekerr, wm, fla + `${command}`, [[`Hacker`, `.${command}`]], m)
+}
 handler.help = ['hacker']
 handler.tags = ['quotes']
 handler.command = /^(heker|hacker|hekel)$/i
 module.exports = handler
 
 function pickRandom(list) {
-    return list[Math.floor(list.length * Math.random())]
+  return list[Math.floor(list.length * Math.random())]
 }
 
 global.heker = [

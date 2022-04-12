@@ -35,7 +35,7 @@ ${isSurrender ? '' : `+${room.winScore} XP tiap jawaban benar`}
     `.trim()
         await this.sendB(m.chat, caption, wm, null, [[`${isWin ? 'Family 100' : isSurrender ? 'Family 100' : 'Nyerah'}`, `${isWin ? '.family100' : isSurrender ? '.family100' : ' '}`]], m, {
             //contextInfo: {
-                mentions: this.parseMention(caption)
+            mentions: this.parseMention(caption)
             //}
         }).then(msg => {
             return this.game[id].msg = msg

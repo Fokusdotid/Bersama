@@ -1,8 +1,8 @@
 module.exports = Object.assign(async function handler(m, { isOwner, isPremium, command }) {
-	if(!(isOwner || isPremium)) {
-		                     global.dfail('premium', m, conn) 
-                             throw false 
-                          }
+    if (!(isOwner || isPremium)) {
+        global.dfail('premium', m, conn)
+        throw false
+    }
     if (!m.quoted) throw 'Reply Pesan!'
     if (!m.quoted.fileSha256) throw 'SHA256 Hash Missing'
     let sticker = global.db.data.sticker

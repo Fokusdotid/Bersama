@@ -9,6 +9,6 @@ handler.help = ['getplugin'].map(v => v + ' <teks>')
 handler.tags = ['host']
 handler.command = /^(getplugin|gp)$/i
 
-handler.rowner = true 
+handler.rowner = true
 
 module.exports = handler

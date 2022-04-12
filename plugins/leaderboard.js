@@ -7,7 +7,7 @@ let handler = async (m, { conn, usedPrefix, command, args, participants }) => {
   let sortedLim = users.map(toNumber('limit')).sort(sort('limit'))
   let sortedLevel = users.map(toNumber('level')).sort(sort('level'))
   let usersExp = sortedExp.map(enumGetKey)
-  let usersMoney = sortedMoney .map(enumGetKey)
+  let usersMoney = sortedMoney.map(enumGetKey)
   let usersLim = sortedLim.map(enumGetKey)
   let usersLevel = sortedLevel.map(enumGetKey)
   console.log(participants)
@@ -30,7 +30,7 @@ ${sortedLevel.slice(0, len).map(({ jid, level }, i) => `${i + 1}. ${participants
 `
   conn.sendBL(m.chat, text, wm, fla + `leaderboard top ${len}`, [[`Menu`, `${usedPrefix}menu`]], m, {
     //contextInfo: {
-      mentions: [...usersExp.slice(0, len), ...usersLim.slice(0, len), ...usersLevel.slice(0, len)].filter(v => !participants.some(p => v === p.jid))
+    mentions: [...usersExp.slice(0, len), ...usersLim.slice(0, len), ...usersLevel.slice(0, len)].filter(v => !participants.some(p => v === p.jid))
     //}
   })
 }

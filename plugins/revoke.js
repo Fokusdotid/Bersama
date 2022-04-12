@@ -1,8 +1,8 @@
 let handler = async (m, { isAdmin, isOwner, conn, command }) => {
   if (!(isAdmin || isOwner)) {
-                global.dfail('admin', m, conn)
-                throw false
-                }
+    global.dfail('admin', m, conn)
+    throw false
+  }
   conn.groupRevokeInvite(m.chat)
   conn.reply(m.chat, `Sukses ${command} link grup, link telah di kirim ke chat pribadi`, m)
   await delay(1000)

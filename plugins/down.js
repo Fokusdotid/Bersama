@@ -1,14 +1,14 @@
 let handler = async (m, { conn, isbotAdmin, isAdmin, isOwner }) => {
-	if(isGroup) throw `di grup`
-    if(isOwner) throw false 
-    if(isbotAdmin) throw 'gk bisa'
-    if (m.fromMe) throw 'Nggk'
-    if (isAdmin) throw 'Padahal udah jadi admin'
+  if (isGroup) throw `di grup`
+  if (isOwner) throw false
+  if (isbotAdmin) throw 'gk bisa'
+  if (m.fromMe) throw 'Nggk'
+  if (isAdmin) throw 'Padahal udah jadi admin'
   await conn.groupParticipantsUpdate(
-    m.chat, 
+    m.chat,
     [m.sender],
     "demote" // replace this parameter with "remove", "demote" or "promote"
-)
+  )
 }
 handler.help = ['down.']
 handler.tags = ['owner']

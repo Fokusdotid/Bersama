@@ -18,7 +18,7 @@ async function handler(m, { text }) {
             text,
             timeout: setTimeout(() => (conn.sendB(m.chat, `Timeout, do you want update again?`, wm, null, [[`Yes`, `.u2 ${text}`], [`No`, `n`]], m), delete confirmation[m.sender]), 60000)
         }
-        return conn.sendB(m.chat, `The file already exists, are you sure you want to overwrite it?  (Y/n) (60s Timeout)`, wm, null, [[`Yes`, `y`], [`No`, `n`]], m) 
+        return conn.sendB(m.chat, `The file already exists, are you sure you want to overwrite it?  (Y/n) (60s Timeout)`, wm, null, [[`Yes`, `y`], [`No`, `n`]], m)
     }
     res.body.pipe(createWriteStream(filename))
     res.body.once('end', () => {
@@ -48,7 +48,7 @@ handler.all = async m => {
 }
 handler.help = ['update2']
 handler.tags = ['host']
-handler.command = ['update2', 'u2', 'uopdate2','uo2'] //ANJIRRR VVIBU
+handler.command = ['update2', 'u2', 'uopdate2', 'uo2'] //ANJIRRR VVIBU
 
 handler.rowner = true
 

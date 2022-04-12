@@ -1,9 +1,9 @@
 let handler = async (m, { conn, isAdmin, isOwner, args, usedPrefix, command }) => {
 	if (!(isAdmin || isOwner)) {
-                global.dfail('admin', m, conn)
-                throw false
-                }
-     
+		global.dfail('admin', m, conn)
+		throw false
+	}
+
 	let isClose = {
 		'open': 'not_announcement',
 		'buka': 'not_announcement',
@@ -22,17 +22,17 @@ ${usedPrefix + command} buka
 	`.trim(), wm, null, [['Buka', '#gc 1'], ['Tutup', '#gc 0']])
 		throw false
 	}
-        try {
-	await conn.groupSettingUpdate(m.chat, isClose)
-        } catch {
-         throw `Jadikan bot sebagai admin untuk menggunakan perintah ini!`
-   }
+	try {
+		await conn.groupSettingUpdate(m.chat, isClose)
+	} catch {
+		throw `Jadikan bot sebagai admin untuk menggunakan perintah ini!`
+	}
 }
 handler.help = ['grup <open/close>']
 handler.tags = ['group']
 handler.command = /^(gro?up|gc)$/i
 
 //handler.botAdmin = true
-handler.group = true 
+handler.group = true
 
 module.exports = handler

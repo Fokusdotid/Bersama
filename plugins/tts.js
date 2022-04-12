@@ -5,7 +5,7 @@ let { spawn } = require('child_process')
 const defaultLang = 'id'
 let handler = async (m, { conn, usedPrefix, command, args }) => {
   let name = m.sender
-  let fkonn = { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: '6285346545126@s.whatsapp.net' } : {}) }, message: { contactMessage: { displayName: `${await conn.getName(name)}`, vcard: `BEGIN:VCARD\nVERSION:3.0\nN:;a,;;;\nFN:${name}\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`}}}
+  let fkonn = { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: '6285346545126@s.whatsapp.net' } : {}) }, message: { contactMessage: { displayName: `${await conn.getName(name)}`, vcard: `BEGIN:VCARD\nVERSION:3.0\nN:;a,;;;\nFN:${name}\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` } } }
   let lang = args[0]
   let text = args.slice(1).join(' ')
   if ((args[0] || '').length !== 2) {
@@ -19,8 +19,8 @@ let handler = async (m, { conn, usedPrefix, command, args }) => {
   catch {
     res = await tts(text)
   } finally {
-  if(res) conn.sendFile(m.chat, res, 'tts.opus', null, fkonn, true) 
-   else return m.reply(`teksnya mana?\n\ncontoh: *${usedPrefix}${command} rasel comel*`)
+    if (res) conn.sendFile(m.chat, res, 'tts.opus', null, fkonn, true)
+    else return m.reply(`teksnya mana?\n\ncontoh: *${usedPrefix}${command} rasel comel*`)
   }
 }
 handler.help = ['tts <lang> <teks>']
