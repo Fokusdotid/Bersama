@@ -51,8 +51,8 @@ module.exports = {
         global.sock = conn
         global.namabot = conn.user.name
 
-        let wf = await (await fetch('https://api.waifu.pics/sfw/waifu')).json()
-        let wfu = wf.url
+        // let wf = await (await fetch('https://api.waifu.pics/sfw/waifu')).json()
+        // let wfu = wf.url
         let ne = await (await fetch('https://raw.githubusercontent.com/ArugaZ/grabbed-results/main/random/anime/neko.txt')).text()
         let nek = ne.split('\n')
         let neko = pickRandom(nek)
