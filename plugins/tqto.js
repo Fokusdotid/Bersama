@@ -4,8 +4,8 @@
 * mending lu tambahin deh nama lu jangan hapus kreditnya
 **/
 
-let handler = async (m, { usedPrefix}) => {
-let tqto = `*BIG THANKS TO*
+let handler = async (m, { usedPrefix }) => {
+    let tqto = `*BIG THANKS TO*
 
 Nurutomo: 
 https://github.com/Nurutomo
@@ -15,6 +15,8 @@ Ariffb:
 https://github.com/Ariffb25
 Aguz:
 https://github.com/FokusDotId
+Amelia Lisa:
+https://github.com/Ameliascrf
 Aniq12
 https://github.com/aniq12
 Ilman: 
@@ -28,7 +30,7 @@ https://github.com/raselcomel
 
 \`\`\`${conn.user.name}\`\`\`
 `
- conn.sendTBL(m.chat, tqto, wm, 'https://avatars.githubusercontent.com/u/18616827?v=4', `Source Code Bot ✨`, `https://github.com/fokusdotid/bersama`, null, null, 'Menu', `${usedPrefix}menu`, null, null, null, null, m) 
+    conn.sendTBL(m.chat, tqto, wm, 'https://avatars.githubusercontent.com/u/18616827?v=4', `Source Code Bot ✨`, `https://github.com/fokusdotid/bersama`, null, null, 'Menu', `${usedPrefix}menu`, null, null, null, null, m)
 }
 handler.help = ['tqto']
 handler.tags = ['info']

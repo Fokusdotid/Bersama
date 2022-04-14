@@ -14,11 +14,11 @@ module.exports = Object.assign(async function handler(m, { conn, text }) {
 ${sticker.mentionedJid.length > 0 ? `*Cmd Mention:*
 ${sticker.mentionedJid.map((v, i) => `No. *${i + 1}*:\n*Mention Name:* ${conn.getName(v)}\n*Mention Number:* ${splitM(v)}\n*Mention Jid:* ${v}`).join('\n\n')}` : ''} 
 `.trim())
-else m.reply('Sticker Not in the database')
+    else m.reply('Sticker Not in the database')
 }, {
-help: ['cmd'].map(v => 'info' + v + ' <text>'),
-tags: ['database'],
-command: ['infocmd']
+    help: ['cmd'].map(v => 'info' + v + ' <text>'),
+    tags: ['database'],
+    command: ['infocmd']
 })
 
 /**
@@ -27,5 +27,5 @@ command: ['infocmd']
 * @returns String
 */
 function splitM(jid) {
-return jid.split('@')[0]
+    return jid.split('@')[0]
 }

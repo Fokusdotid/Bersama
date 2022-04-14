@@ -23,9 +23,9 @@ handler.before = async function (m) {
                 while (levelling.canLevelUp(user.level, user.exp, global.multiplier)) user.level++
 
                 if (before !== user.level) {
-                await this.sendBL(m.chat, `${sa}${kki} Level Up ${kka}\n${gy} Nama: *${name}*\n${gy} Tag: *@${who.split(`@`)[0]}*\n${gy} Level sebelumnya: *${before}*\n${gy} Level sekarang: *${user.level}*\n${sb}\n\nBanyak berinteraksi dengan *BOT* semakin mudah naik level!`.trim(), wm, pp, [[`Level Up`, `.levelup`], [`Claim`, `.claim`]], m, {mentions: [who]})                            
-       }
-    }
+                        await this.sendBL(m.chat, `${sa}${kki} Level Up ${kka}\n${gy} Nama: *${name}*\n${gy} Tag: *@${who.split(`@`)[0]}*\n${gy} Level sebelumnya: *${before}*\n${gy} Level sekarang: *${user.level}*\n${sb}\n\nBanyak berinteraksi dengan *BOT* semakin mudah naik level!`.trim(), wm, pp, [[`Level Up`, `.levelup`], [`Claim`, `.claim`]], m, { mentions: [who] })
+                }
+        }
 }
 module.exports = handler
 

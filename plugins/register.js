@@ -25,7 +25,7 @@ ${gy} ${zc}Umur${zc}   : ${age} tahun
 ${gy} ${zc}Status${zc} : Terdaftar √
 ${gy} ${zc}Hadiah${zc} : ${prems.includes(m.sender.split`@`[0]) ? '✅ Silahkan chat owner untuk claim hadiah' : '❌ Bukan User Premium'}
 ${sb}
-`.trim(), wm, pp, [[`Profile`,`${usedPrefix}profile`], [`Cek SN`, `.sn`]], m) 
+`.trim(), wm, pp, [[`Profile`, `${usedPrefix}profile`], [`Cek SN`, `.sn`]], m)
 }
 handler.help = ['daftar', 'register'].map(v => v + ' <name>.<age>')
 handler.tags = ['xp']

@@ -10,8 +10,8 @@ let handler = async (m, { conn, command, usedPrefix, args }) => {
     return `*${title}*\n_${link}_\n_${snippet}_`
   }).join`\n\n=========================\n\n`
   try {
-    await conn.sendMedia(m.chat, 'https://telegra.ph/file/92a008f4c1a2bfb1671e5.mp4', m, {caption: '*Google Search*\n\n*Source:* ' + url + '\n\n' + msg, gifPlayback: true, jpegThumbnail: await(await fetch('https://telegra.ph/file/62da3c5e3f4319d949705.jpg')).buffer()})
-   } catch {
+    await conn.sendMedia(m.chat, 'https://telegra.ph/file/92a008f4c1a2bfb1671e5.mp4', m, { caption: '*Google Search*\n\n*Source:* ' + url + '\n\n' + msg, gifPlayback: true, jpegThumbnail: await (await fetch('https://telegra.ph/file/62da3c5e3f4319d949705.jpg')).buffer() })
+  } catch {
     throw msg
   }
 }

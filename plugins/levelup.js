@@ -18,16 +18,16 @@ let handler = async (m, { conn, usedPrefix }) => {
     let usersLevel = sortedLevel.map(enumGetKey)
     let { min, xp, max } = levelling.xpRange(user.level, global.multiplier)
     if (!levelling.canLevelUp(user.level, user.exp, global.multiplier)) {
-        {
-          await conn.sendBL(m.chat, `${sa}${kki} To Level Up ${kka}\n${gy} Nama: *${name}*\n${gy} Level: *${user.level}*\n${gy} XP: ( *${user.exp - min}/${xp}* )\n${gy} Kurang *${max - user.exp}* XP lagi levelup!\n${sb}`.trim(), wm, pp, [['On Autolevelup', `${usedPrefix}on autolevelup`]], m)
-        }
+      {
+        await conn.sendBL(m.chat, `${sa}${kki} To Level Up ${kka}\n${gy} Nama: *${name}*\n${gy} Level: *${user.level}*\n${gy} XP: ( *${user.exp - min}/${xp}* )\n${gy} Kurang *${max - user.exp}* XP lagi levelup!\n${sb}`.trim(), wm, pp, [['On Autolevelup', `${usedPrefix}on autolevelup`]], m)
+      }
     }
     let before = user.level * 1
     while (levelling.canLevelUp(user.level, user.exp, global.multiplier)) user.level++
     if (before !== user.level) {
-        {
-          await conn.sendBL(m.chat, `${sa}${kki} Level Up ${kka}\n${gy} Nama: *${name}*\n${gy} Level sebelumnya: *${before}*\n${gy} Level sekarang: *${user.level}*\n${sb}\n\nBanyak berinteraksi dengan *BOT* semakin mudah naik level!`.trim(), wm, pp, [['Claim', `${usedPrefix}claim`]], m)
-        }
+      {
+        await conn.sendBL(m.chat, `${sa}${kki} Level Up ${kka}\n${gy} Nama: *${name}*\n${gy} Level sebelumnya: *${before}*\n${gy} Level sekarang: *${user.level}*\n${sb}\n\nBanyak berinteraksi dengan *BOT* semakin mudah naik level!`.trim(), wm, pp, [['Claim', `${usedPrefix}claim`]], m)
+      }
     }
   }
 }

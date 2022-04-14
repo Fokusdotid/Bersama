@@ -1,10 +1,10 @@
-const { proto, generateWAMessage,  areJidsSameUser } = require('@adiwajshing/baileys')
+const { proto, generateWAMessage, areJidsSameUser } = require('@adiwajshing/baileys')
 //const util = require('util')
 
 module.exports = {
     async all(m, chatUpdate) {
         if (m.isBaileys) return
-        if (!m.message) return 
+        if (!m.message) return
         if (!(m.message.buttonsResponseMessage || m.message.templateButtonReplyMessage || m.message.listResponseMessage)) return
         let id = m.message.buttonsResponseMessage?.selectedButtonId || m.message.templateButtonReplyMessage?.selectedId || m.message.listResponseMessage?.singleSelectReply.selectedRowId
         let text = m.message.buttonsResponseMessage?.selectedDisplayText || m.message.templateButtonReplyMessage?.selectedDisplayText || m.message.listResponseMessage?.description

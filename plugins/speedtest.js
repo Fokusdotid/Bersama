@@ -10,8 +10,8 @@ let handler = async (m, { conn }) => {
         o = e
     } finally {
         let { stdout, stderr } = o
-        if (stdout.trim()) conn.reply(m.chat, stdout, 0, {mentions: [m.sender]})
-        if (stderr.trim()) conn.reply(m.chat, stderr, 0, {mentions: [m.sender]})
+        if (stdout.trim()) conn.reply(m.chat, stdout, 0, { mentions: [m.sender] })
+        if (stderr.trim()) conn.reply(m.chat, stderr, 0, { mentions: [m.sender] })
     }
 }
 handler.help = ['speedtest']

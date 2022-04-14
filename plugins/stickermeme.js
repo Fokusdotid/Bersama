@@ -1,6 +1,6 @@
 const uploadImage = require('../lib/uploadImage')
 let handler = async (m, { conn, text, usedPrefix, command }) => {
-    
+
     let [atas, bawah] = text.split`|`
     let q = m.quoted ? m.quoted : m
     let mime = (q.msg || q).mimetype || ''
